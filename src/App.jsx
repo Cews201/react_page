@@ -4,16 +4,24 @@ import viteLogo from '/vite.svg'
 //import './App.css'
 import Form from './components/Form'
 import '../src/assets/css/styles.css'
+import Tarjeta from './components/Tarjeta'
+
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <div>
+    <>
+    <div>
+      <Tarjeta titulo="Formulario estudiantes" parrafo="Diligencie el formulario para oficializar su registro"/>
+    </div>
+    <div>
        <Form/>
-      </div>
-  )
+    </div>
+  
+    </>
+  )    
 }
 
 export default App
