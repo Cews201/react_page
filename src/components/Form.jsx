@@ -16,7 +16,7 @@ function Form(){
             <Input titulo="Email" type="email" placeholder="correo"/>
             <Input titulo="LinkedId" type="text" placeholder="linkedID"/>
             <Input titulo="GitHub" type="text" placeholder="gitHub"/>
-            <Button type="submit" value="Enviar"/>
+            <Button onClick={() => console.log("click")} disabled={true} label="Enviar" />
         </form>
     )
 }
