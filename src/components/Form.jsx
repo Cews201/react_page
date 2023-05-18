@@ -2,11 +2,13 @@ import React from "react";
 import Select from "./Select";
 import Button from "./Button";
 import Input from "./Input";
+import Contador from "./Contador";
 
 
 function Form(){
     const opciones=["Cedula","Tarjeta de Identidad","Pasaporte", "Cedula extranjería",]
     return(
+        <>
         <form>
             <Select titulo="Tipo de identificación" opciones={opciones} />
             <Input titulo="Número de identificación" type="number" placeholder="Número de identificación" />
@@ -16,8 +18,13 @@ function Form(){
             <Input titulo="Email" type="email" placeholder="correo"/>
             <Input titulo="LinkedId" type="text" placeholder="linkedID"/>
             <Input titulo="GitHub" type="text" placeholder="gitHub"/>
-            <Button onClick={() => console.log("click")} disabled={true} label="Enviar" />
+            <Button onClick={() => console.log('click')} disabled={false} label="Enviar" />
+
         </form>
+        <h1>
+            <Contador/>
+        </h1>
+        </>
     )
 }
 export default Form;
