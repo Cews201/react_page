@@ -1,9 +1,16 @@
 import React,{useState} from "react";
 
 function Contador(){
-    const [count, setCount]=useState(0);
+    let valorInicial=10;
+    const [count, setCount]=useState(valorInicial);
     const aumentar= () =>setCount(count + 1);
-    const disminuir=() =>setCount(count - 1);
+    const disminuir=() => {
+        if (count> 0){
+            setCount(count - 1);
+        }else{
+            alert('No se puede disminuir más')
+        }
+    } ;
     const reset = () => setCount(0);
     return(
         <div>
